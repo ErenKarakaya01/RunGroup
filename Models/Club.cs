@@ -1,10 +1,9 @@
 ﻿using Run_Group.Data.Enum;
 using Run_Group.Models;
-using RunGroopWebApp.Data.Enum;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RunGroopWebApp.Models
+namespace Run_Group.Models
 {
     public class Club
     {

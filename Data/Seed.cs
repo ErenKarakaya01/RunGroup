@@ -2,10 +2,8 @@
 using Run_Group.Data.Enum;
 using Run_Group.Data;
 using Run_Group.Models;
-using RunGroopWebApp.Data.Enum;
-using RunGroopWebApp.Models;
 
-namespace RunGroopWebApp.Data
+namespace Run_Group.Data
 {
     public class Seed
     {

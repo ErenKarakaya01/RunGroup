@@ -1,4 +1,4 @@
-﻿using RunGroopWebApp.Models;
+﻿using Run_Group.Models;
 using System.ComponentModel.DataAnnotations;
 
 namespace Run_Group.Models

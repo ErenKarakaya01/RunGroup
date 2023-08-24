@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Run_Group.Models;
-using RunGroopWebApp.Models;
 
 namespace Run_Group.Data
 {
