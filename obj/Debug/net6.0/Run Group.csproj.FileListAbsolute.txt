@@ -103,3 +103,4 @@ C:\Users\erenk\source\repos\Run Group\Run Group\obj\Debug\net6.0\refint\Run Grou
 C:\Users\erenk\source\repos\Run Group\Run Group\obj\Debug\net6.0\Run Group.pdb
 C:\Users\erenk\source\repos\Run Group\Run Group\obj\Debug\net6.0\Run Group.genruntimeconfig.cache
 C:\Users\erenk\source\repos\Run Group\Run Group\obj\Debug\net6.0\ref\Run Group.dll
+C:\Users\erenk\source\repos\Run Group\Run Group\bin\Debug\net6.0\appsettings.json
