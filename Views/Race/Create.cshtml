@@ -1,5 +1,6 @@
-﻿@using Run_Group.Data.Enum;
-@model Race
+﻿@using Run_Group.Data.Enum
+@using Run_Group.ViewModels
+@model CreateRaceViewModel
 
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -7,7 +8,7 @@
 @{
 }
 
-<form method="post" asp-action="Create">
+<form method="post" asp-action="Create" enctype="multipart/form-data">
     <div class="mb-3">
         <label asp-for="Title" class="form-label">Title</label>
         <input asp-for="Title" class="form-control">
@@ -43,7 +44,7 @@
     </div>
     <div class="form-row form-group">
         <div class="col">
-            <input asp-for="Image" class="form-control form-control-lg" placeholder="Image" />
+            <input asp-for="Image" type="file" class="form-control form-control-lg" placeholder="Image" />
             <span asp-validation-for="Image" class="text-danger"></span>
         </div>
     </div>

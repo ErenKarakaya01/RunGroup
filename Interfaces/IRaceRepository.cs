@@ -6,6 +6,7 @@ namespace Run_Group.Interfaces
     public interface IRaceRepository
     {
         Task<Race?> GetByIdAsync(int id);
+        Task<Race?> GetByIdAsyncNoTracking(int id);
         Task<IEnumerable<Race>> GetAll();
         Task<IEnumerable<Race>> GetAllRacesByCity(string city);
         bool Add(Race race);
