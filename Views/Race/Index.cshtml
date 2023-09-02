@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Race> 
+﻿@model IEnumerable<Race>
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
@@ -11,20 +11,30 @@
     <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            @foreach (var item in Model)
+            @foreach (var race in Model)
             {
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="@item.Image" class="bd-placeholder-img card-img-top" width="100%" height="225" />
+                        <img src="@race.Image" class="bd-placeholder-img card-img-top" width="100%" height="225" />
                         <div class="card-body">
-                            <p class="card-text">@item.Title</p>
-                            <p class="card-text">@item.Description</p>
+                            <p class="card-text">@race.Title</p>
+                            <p class="card-text">@race.Description</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a type="button" class="btn btn-secondary mb-1" asp-controller="Race" asp-action="Detail" asp-route-id="@item.Id">View</a>
-                                    <a type="button" class="btn btn-secondary mb-1" asp-controller="Race" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                    <a type="button" class="btn btn-secondary mb-1" asp-controller="Race" asp-action="Detail" asp-route-id="@race.Id">View</a>
+                                    @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+                                    {
+                                        <div>
+                                            <a type="button" class="btn btn-sm btn-outline-info" asp-controller="Race" asp-action="Edit" asp-route-id="@race.Id">
+                                                Edit
+                                            </a>
+                                            <a type="button" class="btn btn-sm btn-outline-danger" asp-controller="Race" asp-action="Delete" asp-route-id="@race.Id">
+                                                Delete
+                                            </a>
+                                        </div>
+                                    }
                                 </div>
-                                <small class="text-body-secondary">@item.RaceCategory</small>
+                                <small class="text-body-secondary">@race.RaceCategory</small>
                             </div>
                         </div>
                     </div>
