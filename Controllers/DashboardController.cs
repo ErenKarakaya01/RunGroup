@@ -8,11 +8,13 @@ namespace Run_Group.Controllers
     {
         private readonly IDashboardRepository dashboardRespository;
         private readonly IPhotoService photoService;
+        private readonly IHttpContextAccessor httpContextAccessor;
 
-        public DashboardController(IDashboardRepository dashboardRespository, IPhotoService photoService)
+        public DashboardController(IDashboardRepository dashboardRespository, IPhotoService photoService, IHttpContextAccessor httpContextAccessor)
         {
             this.dashboardRespository = dashboardRespository;
             this.photoService = photoService;
+            this.httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<IActionResult> Index()

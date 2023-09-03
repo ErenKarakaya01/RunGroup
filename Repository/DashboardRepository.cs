@@ -1,4 +1,5 @@
-﻿using Run_Group.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Run_Group.Data;
 using Run_Group.Interfaces;
 using Run_Group.Models;
 
@@ -26,6 +27,16 @@ namespace Run_Group.Repository
             var curUser = httpContextAccessor.HttpContext?.User.GetUserId();
             var userRaces = context.Races.Where(r => r.AppUser.Id == curUser);
             return userRaces.ToList();
+        }
+
+        public async Task<AppUser> GetUserById(string id)
+        {
+            return await context.Users.FindAsync(id);
+        }
+
+        public async Task<AppUser> GetByIdNoTracking(string id)
+        {
+            return await context.Users.Where(u => u.Id == id).AsNoTracking().FirstOrDefaultAsync();
         }
 
     }
