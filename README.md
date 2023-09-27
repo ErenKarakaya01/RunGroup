@@ -2,7 +2,7 @@
 
 Run Group is an online platform for runners. This platform will help you to find clubs, schedule events, and meet other runners in your area. 
 
-<kbd>![image](![Screenshot_28](https://github.com/ErenKarakaya01/RunGroup/assets/58625563/cf7e1312-f0ba-4341-8a21-68837bdea466))</kbd>
+<kbd>![Screenshot_28](https://github.com/ErenKarakaya01/RunGroup/assets/58625563/cf7e1312-f0ba-4341-8a21-68837bdea466)</kbd>
 
 1. Go into directory where you plan on keeping project and run.
 
